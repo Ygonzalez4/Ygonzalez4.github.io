@@ -54,17 +54,17 @@ function draw() {
   vertex(155,180);
   vertex(145,190);
   vertex(135,180);
-  vertex(140,150)
+  vertex(140,150);
   endShape();
   //es el collar---------------------------------------------------
  fill(255,255,255);
- ellipse(540,130,15,15)
- ellipse(550,135,15,15)
- ellipse(560,136,15,15)
- ellipse(570,136,15,15)
- ellipse(580,136,15,15)
- ellipse(590,135,15,15)
- ellipse(600,131,15,15)
+ ellipse(540,130,15,15);
+ ellipse(550,135,15,15);
+ ellipse(560,136,15,15);
+ ellipse(570,136,15,15);
+ ellipse(580,136,15,15);
+ ellipse(590,135,15,15);
+ ellipse(600,131,15,15);
   
   
   
