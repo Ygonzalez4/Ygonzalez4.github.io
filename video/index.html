@@ -1,159 +1,199 @@
-
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8"> <!-- Especifica que el document utilitza el conjunt de caràcters UTF-8 (per incloure accents i símbols especials) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assegura que la pàgina s'adapti a dispositius mòbils -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!-- Enllaça amb la llibreria CSS Bootstrap per dissenyar la pàgina -->
-    <title>Noemí's web</title> <!-- Títol de la pàgina que apareix a la pestanya del navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Yeray's Web</title>
     <style>
-        /* Estils generals del cos de la pàgina */
+        /* Estilos generales del cuerpo de la página */
         body {
-            font-family: Arial, sans-serif; /* Tipus de lletra principal */
-            margin: 0; /* Elimina el marge extern de la pàgina */
-            padding: 0; /* Elimina el padding intern de la pàgina */
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50; /* Fondo oscuro */
+            color: #ecf0f1; /* Texto claro */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #34495e; /* Azul oscuro */
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand img {
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            padding: 10px 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Contenedor principal */
+        .content-container {
+            padding: 30px;
+            margin-top: 20px;
+            background-color: #34495e;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
-            text-align: center; /* Centra el títol principal de la pàgina */
-            margin: 20px 0; /* Afegeix espai superior i inferior al títol */
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
-        /* Estils específics del vídeo */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ecf0f1;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo específico del vídeo */
         video {
-            max-width: 100%; /* Fa que el vídeo no superi l'amplada del contenidor */
-            height: auto; /* Ajusta l'alçada automàticament segons l'amplada */
-            border: 1px solid #ddd; /* Afegeix un contorn clar al vídeo */
-            border-radius: 8px; /* Fa que les cantonades del vídeo siguin arrodonides */
-            background-color: #000; /* Fons negre per defecte si el vídeo no es carrega */
+            width: 80%; /* Ajustar tamaño del video para que no llegue al borde */
+            max-width: 800px; /* No más de 800px de ancho */
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #000;
+            margin: 20px auto; /* Centramos el vídeo y añadimos espacio arriba y abajo */
+            display: block;
         }
 
-        .container-fluid {
-            max-width: 100%; /* Assegura que la barra de navegació ocupa tota l'amplada de la pantalla */
-        }
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .navbar .navbar-brand {
+                font-size: 1.25rem;
+            }
 
-        .navbar {
-            padding-left: 0; /* Elimina el padding (espai) a l'esquerra de la barra de navegació */
-        }
+            .content-container {
+                padding: 20px;
+            }
 
-        /* Estils per al logotip */
-        .logo {
-            margin-right: 20px; /* Afegeix espai entre el logotip i el text de la marca */
-            margin-left: 0; /* Elimina espai a l'esquerra del logotip */
-        }
+            h1 {
+                font-size: 2rem;
+            }
 
-        /* Estils per al text de la marca */
-        .navbar-brand {
-            display: flex; /* Utilitza flexbox per alinear el logotip i el text en una línia */
-            align-items: center; /* Centra verticalment els elements dins del contenidor */
-        }
-
-        .brand-text {
-            white-space: nowrap; /* Evita que el text de la marca es trenqui en diverses línies */
-            font-size: 1.25rem; /* Defineix la mida de la lletra */
-        }
-
-        .content-container {
-            margin: 20px 10px; /* Afegeix marges per separar el contingut principal de les vores de la pàgina */
+            video {
+                width: 95%; /* Video más grande en pantallas pequeñas */
+            }
         }
     </style>
 </head>
 <body>
-<!-- Inici de la pàgina -->
 
-<!-- Barra de navegació -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- Navbar amb estil clar -->
-    <div class="container-fluid"> <!-- Contenidor que assegura que el contingut s'adapti a la pantalla -->
-        <!-- Logotip i nom de la marca -->
-        <a class="navbar-brand d-flex align-items-center" href="#"> <!-- L'enllaç porta a l'inici de la pàgina -->
-            <img src="../logo.png" alt="Logo" width="50" class="logo"> <!-- Mostra el logotip de la marca -->
-            <span class="brand-text">Web d'alumne</span> <!-- Text al costat del logotip -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../logo.png" alt="Logo" width="50" class="logo">
+            <span class="brand-text">Web de Yeray</span>
         </a>
-
-        <!-- Botó de menú desplegable (per dispositius mòbils) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <!-- Icona del botó de menú -->
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Enllaços del menú de navegació -->
-        <div class="collapse navbar-collapse" id="navbarNav"> <!-- Menú que es pot expandir o col·lapsar -->
-            <ul class="navbar-nav ms-auto"> <!-- Llista dels enllaços del menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inici</a> <!-- Enllaç a la pàgina principal -->
+                    <a class="nav-link" href="#">Inici</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 1</a> <!-- Enllaç al tema 1 -->
+                    <a class="nav-link" href="#">Tema 1</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <!-- Menú desplegable per a projectes -->
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Projectes</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Contingut del menú desplegable -->
-                        <a class="dropdown-item" href="#">Projecte 1</a> <!-- Submenú: Projecte 1 -->
-                        <a class="dropdown-item" href="#">Projecte 2</a> <!-- Submenú: Projecte 2 -->
-                        <a class="dropdown-item" href="#">Projecte 3</a> <!-- Submenú: Projecte 3 -->
+                       aria-haspopup="true" aria-expanded="false">Projectes</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Projecte 1</a>
+                        <a class="dropdown-item" href="#">Projecte 2</a>
+                        <a class="dropdown-item" href="#">Projecte 3</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 2</a> <!-- Enllaç al tema 2 -->
+                    <a class="nav-link" href="#">Tema 2</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Contingut principal -->
-<div class="content-container"> <!-- Contenidor del text i contingut principal -->
-    <h1>Welcome</h1> <!-- Títol principal -->
-    <p>
-        I'm Noemí and this is my video project for Coldplay. I'm sixteen and I'm studying at 
-        <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">Pompeu Fabra High School.</a> <!-- Enllaç al lloc web de l'institut -->
+<!-- Contenido principal -->
+<div class="content-container">
+    <h1>Welcome</h1>
+    <p>I'm Yeray and this is my video project for Coldplay. I'm sixteen and I'm studying at 
+        <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">Pompeu Fabra High School.</a>
     </p>
-    <p>Main idea of my video: transform sound into electrical energy.</p> <!-- Descripció del projecte -->
+    <p>Main idea of my video: transform sound into electrical energy.</p>
 </div>
 
-<!-- Secció del vídeo -->
-<div class="text-center"> <!-- Centra el vídeo -->
-    <video controls poster="" data-src="../videos/videoa12.mp4" class="lazy-video"> <!-- Vídeo amb controls -->
-        Your browser does not support the video tag. <!-- Missatge de suport per a navegadors antics -->
+<!-- Sección de vídeo -->
+<div class="text-center">
+    <video controls poster="" data-src="../videos/videoa12.mp4" class="lazy-video">
+        Your browser does not support the video tag.
     </video>
 </div>
 
-<!-- Scripts necessaris per al funcionament -->
+<!-- Scripts necesarios -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () { // Espera que es carregui el document
-        const lazyVideos = document.querySelectorAll(".lazy-video"); // Selecciona tots els vídeos amb càrrega mandrosa
+    document.addEventListener("DOMContentLoaded", function () {
+        const lazyVideos = document.querySelectorAll(".lazy-video");
 
-        if ("IntersectionObserver" in window) { // Comprova si el navegador suporta IntersectionObserver
-            const observer = new IntersectionObserver((entries, observer) => { // Configura l'observador
-                entries.forEach(entry => { // Itera per cada vídeo observat
-                    if (entry.isIntersecting) { // Si el vídeo és visible a la pantalla
-                        const video = entry.target; // Agafa el vídeo observat
-                        if (video.dataset.src) { // Si té un atribut data-src
-                            video.src = video.dataset.src; // Assigna el valor data-src com a src
-                            video.removeAttribute("data-src"); // Elimina l'atribut data-src
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        if (video.dataset.src) {
+                            video.src = video.dataset.src;
+                            video.removeAttribute("data-src");
                         }
-                        observer.unobserve(video); // Deixa d'observar aquest vídeo
+                        observer.unobserve(video);
                     }
                 });
             });
 
-            lazyVideos.forEach(video => observer.observe(video)); // Observa cada vídeo
+            lazyVideos.forEach(video => observer.observe(video));
         } else {
-            // Fallback per a navegadors antics
             lazyVideos.forEach(video => {
                 if (video.dataset.src) {
-                    video.src = video.dataset.src; // Assigna directament el src si no es suporta IntersectionObserver
+                    video.src = video.dataset.src;
                 }
             });
         }
     });
 </script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- Llibreria jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script> <!-- Llibreria Popper per a menús -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> <!-- Bootstrap per a funcionalitats interactives -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
