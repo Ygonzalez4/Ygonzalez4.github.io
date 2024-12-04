@@ -73,7 +73,7 @@ function draw() {
   }
 
   // Mostrar puntuación y tiempo restante
-  fill(0);
+  fill(255); // Color blanco para la puntuación
   textAlign(RIGHT);
   textSize(16);
   textStyle(BOLD);
@@ -99,7 +99,7 @@ function drawBackground() {
 }
 
 function drawNextPiece() {
-  fill(0);
+  fill(255); // Color blanco para el texto
   textAlign(LEFT);
   textSize(16);
   textStyle(BOLD);
@@ -243,12 +243,12 @@ function displayGameOver() {
   textStyle(BOLD);
   text("💀 TE MORISTE 💀", width / 2, height / 2 - 20);
   textSize(16);
-  text("PUNTUACIÓN: " + score, width / 2, height / 2 + 10);
+  text("PUNTUACIÓ: " + score, width / 2, height / 2 + 10);
   if (score > bestScore) {
     bestScore = score;
-    text("NEW RECORD!", width / 2, height / 2 + 40);
+    text("NOU RÈCORD!", width / 2, height / 2 + 40);
   }
-  text("PULSA R PARA REINICIAR", width / 2, height / 2 + 60);
+  text("PULSA R PER REINICIAR", width / 2, height / 2 + 60);
 }
 
 function resetGame() {
