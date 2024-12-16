@@ -1,88 +1,112 @@
-
-
 <!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Benvinguts</title>
-    <style>body {
-    padding: 0; /* Elimina l'espai extra al voltant del cos */
-}
+    <title>Web de Yeray</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50; /* Fondo oscuro */
+            color: #ecf0f1; /* Texto claro */
+            margin: 0;
+            padding: 0;
+        }
 
-.container-fluid {
-    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-}
+        /* Navbar */
+        .navbar {
+            background-color: #34495e; /* Azul oscuro para la navbar */
+        }
 
-    
-    .navbar {
-    padding-left: 0; /* Elimina el padding esquerra de la navbar */
-}
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
 
-.logo {
-    margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
-    margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
-}
+        .navbar .navbar-brand img {
+            margin-right: 10px;
+        }
 
-    
+        .navbar-nav .nav-link {
+            color: white !important;
+            padding: 10px 15px;
+        }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
 
+        /* Contenedor principal */
+        .content-container {
+            padding: 30px;
+            margin-top: 20px;
+            background-color: #34495e;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-}
+        h1 {
+            font-size: 2.5rem;
+            color: #e74c3c; /* Rojo vibrante para el título */
+            margin-bottom: 20px;
+        }
 
-.brand-text {
-    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
-    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
-}  
-.content-container {
-            margin-left: 10px;
-            margin-right: 10px; /* Marges laterals ajustats */
-            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
+        ol {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ecf0f1;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .navbar .navbar-brand {
+                font-size: 1.25rem;
+            }
+
+            .content-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-       <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="logo.png" alt="Logo" width="50" class="logo">
-    <span class="brand-text">Web de Yeray</span>
-</a>
-
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://dbermejo4.github.io/logo.png" alt="Logo" width="50" class="logo">
+            <span class="brand-text">Web de Yeray</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inici</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 1</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Projectes</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/Ocells">Ocell que parla</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/video">Video Coldplay</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/TETRIS">Tetris</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/pivot">Pivot</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/SVG">Projecte Coldplay</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/explicacion">Explicació del codi</a>
-                        <a class="dropdown-item" href="https://Ygonzalez4.github.io/captura">Captura de video</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tema 2</a>
+                    <a class="nav-link" href="https://ygonzalez4.github.io/index.html">Inici</a>
                 </li>
             </ul>
         </div>
@@ -93,20 +117,45 @@
 <div class="content-container">
     <h1>Passos per fer una figura animada</h1>
     <ol>
+        <li>PASSOS EN GIMP</li>
         <li>Descarregar Gimp per exemple desde el Company Portal i descarregar el pivot animator</li>
         <li>L'objectiu de Gimp es retallar les parts del nostre cantant (cap, braços, cames...)
         per despres animarlos amb Gimp</li>
         <li>Busquem una imatge del nostre cantant preferit i li retallem les parts del cos</li>
-        <li>Obrim l'imatge amb Fitxer>Obre </li>
-        <li>Cliquem al menú Capes>Transparència>Afegeix canal alfa</li>
+        <li>Obrim l'imatge amb Fitxer>Obre.</li>
+        <li>Cliquem al menú Capes>Transparència>Afegeix canal alfa.</li>
+        <li>Clica sobre les eines sobre el llaç que fa una selecció lliure fent clics al voltant de la part del cos que
+        ens interesa fins una mica més gran perque no quedi buit quan es mou. Fent doble click quan donem tota la volta 
+        i arribem al principi.</li>
+        <li>Cliquem al menú Imatge i dins a "Escapça a la selecció" i aixó crea un troç o una part del cos retallada.</li>
+        <li>Clicar Selecciona i Inverteix dintre de Selecciona.</li>
+        <li>Clica Edita i dintre Retalla.</li>
+        <li>Cliquem al llaç per seleccionar les areas que volem borrar dintre de la nostre part del cos.</li>
+        <li>Cliquem Edita i dintre Retalla.</li>
+        <li>Cliquem a Selecciona i dintre Cap i ara tenim la part del cos completa i buida si cal.</li>
+        <li>Cliquem Borrador i posem mida 20.</li>
+        <li>Cliquem Selecciona i dintre Cap i difuminem el coll o la zona d'unió de parts.</li>
+        <li>Per acabar Fitxer i Anomena i Exporta com a png.</li>
+        <li>Repeteix tot el procés anterior per totes les parts del cos.</li>
+        <li>PASSOS EN PIVOT</li>
+        <li>Cliquem a Fichero >Cargar Sprite i carreguem totes les parts del cos.</li>
+        <li>Cada imatge et surten uns punts en cada cantonada de la part inferior i els mous els punts on estaríen les
+        articulacions i cliquem a símbol de dos boles vermelles amb una línia al mig.</li>
+        <li>És important que la nova articulació creada estigui a sobre de l'anterior articulació on es conecta les
+        dos parts del cos i això amb totes les articulacions.</li>
+        <li>Si volem duplicar una part del cos es pot clicar a Majúscules i al símbol de les dos boletes vermelles amb
+        una ratlla duplicat.</li>
+        <li>Per moure el coll i que no quedi espai buit l'has de donar a les dos boletes vermelles amb la ratlla al mig
+        i clicar al triangle cap abaix per fer la línia més fina.</li>
+        <li>A continuació li donem a l'opció de l'hexagon i triem un triangle de la zona buida.</li>
     </ol>
 </div>
 
-<!-- Scripts necessaris -->
 
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
-
